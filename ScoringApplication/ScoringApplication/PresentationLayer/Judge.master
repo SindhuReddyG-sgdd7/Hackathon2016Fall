@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/PresentationLayer/MasterPage.Master" AutoEventWireup="true" CodeBehind="Judge.master.cs" Inherits="ScoringApplication.Judge" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMaster" runat="server">
+        <div style="height: 700px; width: 100%;">
+        <asp:Panel ID="Panel1" runat="server" Style="z-index: 1; position: absolute; height: 700px;
+            top: 0px; left: 0px; width: 180px;" BackColor="#669999" BorderStyle="None">
+            <asp:LinkButton ID="LinkButtonViewSubmissions" runat="server" Font-Underline="false" Font-Size="Large"
+                Style="z-index: 1; left: 0px; top: 60px; position: absolute; width: 180px; height: 26px;"
+                OnClick="LinkButtonViewSubmissions_Click" ForeColor="Maroon">View Submissions</asp:LinkButton>
+            
+            <asp:LinkButton ID="LinkButtonAddScores" runat="server" Font-Underline="false" Font-Size="Large"
+                Style="z-index: 1; left: 0px; top: 90px; position: absolute; width: 180px; height: 26px;"
+                OnClick="LinkButtonAddScores_Click" ForeColor="Maroon">Add Scores</asp:LinkButton>
+
+           <asp:LinkButton ID="LinkButtonPassword" runat="server" Font-Underline="false" Font-Size="Large"
+                Style="z-index: 1; left: 0px; top: 150px; position: absolute; width: 180px; height: 26px;"
+                OnClick="LinkButtonPassword_Click" 
+                ValidationGroup="ChangePwdManager" CausesValidation="False" 
+                ForeColor="Maroon">Change Password</asp:LinkButton>
+
+            <asp:LinkButton ID="LinkButtonLogout" runat="server" Font-Size="Large"
+                Font-Underline="false" OnClick="LinkButtonLogout_Click" Style="z-index: 1; left: 0px;
+                top: 180px; position: absolute; width: 180px; height: 26px;" 
+                ValidationGroup="ManagerLogout" CausesValidation="False" 
+                ForeColor="Maroon">Logout</asp:LinkButton>
+            
+            <asp:Label ID="lblOnNested" runat="server" 
+                style="z-index: 1; left: 0px; top: 0px; position: absolute" Text="Label" 
+                Font-Names="monotype corsiva,large" Font-Size="Medium" ForeColor="Yellow"></asp:Label>
+            
+        </asp:Panel>
+        <asp:Panel ID="Panel2" runat="server" Style="z-index: 1; position: absolute; height: 700px;
+            left: 180px; top:0px; right: 0px; width: 830px;" 
+            BorderStyle="None">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderJudge" runat="server">
+            </asp:ContentPlaceHolder>
+        </asp:Panel>
+    </div>
+</asp:Content>
